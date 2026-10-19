@@ -1,0 +1,26 @@
+# 60 FPS for Metal Gear Solid: Portable Ops (ULUS-10202): community CWCheat "60FPS v3 [Ingame only]",
+# as posted at https://forums.ppsspp.org/showthread.php?tid=27930 (credit to the original cheat authors).
+# It runs only while the game is at its in-game 20 fps setting (the E0 line checks the frame limiter's
+# minimum at 0x089F5210 == 3): gameplay goes to 60 fps with its speed, wall-sneak and grenade timers
+# re-timed; menus, the codec and cutscenes keep their own rate.  The user's choice over "60FPS v4
+# [Always]" (2026-10-13).  Used by tools/rtl_patch.py.
+_L 0xE0130003 0x001F5210
+_L 0x201F5210 0x00000001
+_L 0x201F4FD8 0x00000005
+_L 0x201F2EE0 0x00000001
+_L 0x201F4FE4 0x00000000
+_L 0x201F4FE8 0x3F800000
+_L 0x201F4FEC 0x3F800000
+_L 0x201F4FF0 0x40AE38E4
+_L 0x20218E6C 0x0000003C
+_L 0x200EE420 0x0A200D81//WallSneak60Fix,a
+_L 0x200EE430 0x44950000//WallSneak60Fix,b
+_L 0x20003604 0x2415000A//WallSneak60Fix,c
+_L 0x20003608 0x0A23B909//WallSneak60Fix,d
+_L 0x2000360C 0x44802000//WallSneak60Fix,e
+_L 0x201236E8 0x00121803//ChaffGrenade,a
+_L 0x20123734 0x00125803//ChaffGrenade,b
+_L 0x201247D0 0x00121803//StunGrenade,a
+_L 0x2012481C 0x00125803//StunGrenade,b
+_L 0x201ED4D8 0x3F000000//Grenade
+_L 0x201ED6A4 0x3F000000//SmokeGrenade

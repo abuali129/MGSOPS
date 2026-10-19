@@ -1,0 +1,4 @@
+PySide6
+arabic-reshaper
+python-bidi
+Pillow
